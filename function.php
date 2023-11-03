@@ -39,11 +39,11 @@
    */
   function show_skill_table($skills,$title){    
     ?>
-      <table class="table">
-        <thead>
+      <table class="table table-light table-bordered">
+        <thead class="table-primary">
           <th colspan="100%"><?php echo $title?></th>
         </thead>
-        <thead>
+        <thead class="table-primary">
           <th><br></th>
           <th>Skill</th>
           <th>Level</th>
