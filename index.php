@@ -46,7 +46,8 @@
     <main style="padding-top: 70px;">
       <div id="about-me" class="container category">  
         <?php $text="Something short and leading about the collection below—its contents, the creator, etc. 
-        Make it short and sweet, but not too short so folks don’t simply skip over it entirely.";  ?>    
+        Make it short and sweet, but not too short so folks don’t simply skip over it entirely.";
+        $text="";  ?>    
         <?php show_card('img/profil.jpg','Engineer',$text,'Last updated 4 mins ago')?> 
         <?php show_card('img/kite.jpg','Passionate',$text,'Last updated 4 mins ago')?>
       </div>
