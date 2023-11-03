@@ -47,7 +47,7 @@
           <th><br></th>
           <th>Skill</th>
           <th>Level</th>
-          <th>Notes</th>
+          <!-- <th>Notes</th> -->
         </thead>
         <tbody>
           <?php foreach ($skills as $skill){?>
@@ -61,7 +61,7 @@
                   <?php }?>
                 </div>
               </td>
-              <td><?php echo $skill[3]?></td>
+              <!-- <td><?php echo $skill[3]?></td> -->
             </tr>
           <?php }?>
         </tbody>
