@@ -48,8 +48,7 @@
         <?php $text="Something short and leading about the collection below—its contents, the creator, etc. 
         Make it short and sweet, but not too short so folks don’t simply skip over it entirely.";  ?>    
         <?php show_card('img/profil.jpg','Engineer',$text,'Last updated 4 mins ago')?> 
-        <?php show_card('img/kite.jpg','Passionate',$text,'Last updated 4 mins ago')?>        
-        </div>
+        <?php show_card('img/kite.jpg','Passionate',$text,'Last updated 4 mins ago')?>
       </div>
 
       <div id="experience" class="container category" style="display:none"> 
@@ -184,11 +183,16 @@
         </div>
       </div>
       <div id="contact" class="container category" style="display:none">  
-        <?php $text="Something short and leading about the collection below—its contents, the creator, etc. 
-        Make it short and sweet, but not too short so folks don’t simply skip over it entirely.";  ?>    
-        <?php show_card('img/kite.jpg','Passionate',$text,'Last updated 4 mins ago')?>        
-        </div>
-      </div>
+        <?php $socials=[
+          ['GitHub','git.jpg','Cocololco','','https://github.com/Cocololco'],
+          ['Instagram','insta.png','Cocololco','','https://www.instagram.com/cocololco/'],
+          ['Twitter','twitter.png','Coc00z','','https://twitter.com/C0c00z'],
+          ['Facebook','facebook.png','Corentin Hillion','','https://www.facebook.com/corentin.hillion'],
+          ['Poker-Schedule.com','poker.png','Cocololco','Owner of this website','https://poker-schedule.com/'],
+          ['Hendonmob','hendonmob.png','Corentin Hillion','Poker Player','https://pokerdb.thehendonmob.com/player.php?a=r&n=526022'],
+          
+        ];?>
+        <?php show_cards_social($socials)?>
       <!-- FOOTER
       <footer class="container">
         <p class="float-end"><a href="#">Back to top</a></p>

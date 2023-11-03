@@ -69,4 +69,33 @@
     <?php
   }
 
+  /**
+   *
+   * Show a Card on the social view
+   *
+   * @param    array  $socials details of the social
+   * 
+   * @return   HTML of the cards
+   *
+   */
+  function show_cards_social($socials){
+    foreach($socials as $social){?>
+    <div class="card mb-3" style="max-width: 1080px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="img/social/<?php echo $social[1]?>" height="90" class="rounded mx-auto d-block" >
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><?php echo $social[0]?></h5>
+            <p class="card-text"><a target="_blank" href="<?php echo $social[4]?>"><?php echo $social[2]?></a></p>
+            <p class="card-text text-body-secondary"><?php echo $social[3]?></p>
+          </div>
+        </div>
+      </div>
+    </div>    
+    <?php
+    }
+  }
+
 ?>
