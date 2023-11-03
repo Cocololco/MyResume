@@ -188,11 +188,13 @@
           ['Instagram','insta.png','Cocololco','','https://www.instagram.com/cocololco/'],
           ['Twitter','twitter.png','Coc00z','','https://twitter.com/C0c00z'],
           ['Facebook','facebook.png','Corentin Hillion','','https://www.facebook.com/corentin.hillion'],
-          ['Poker-Schedule.com','poker.png','Cocololco','Owner of this website','https://poker-schedule.com/'],
+          ['Poker-Schedule.com','poker.png','Coco','Owner of this website','https://poker-schedule.com/'],
           ['Hendonmob','hendonmob.png','Corentin Hillion','Poker Player','https://pokerdb.thehendonmob.com/player.php?a=r&n=526022'],
           
         ];?>
         <?php show_cards_social($socials)?>
+      </div>
+      
       <!-- FOOTER
       <footer class="container">
         <p class="float-end"><a href="#">Back to top</a></p>
