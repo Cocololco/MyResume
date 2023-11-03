@@ -15,7 +15,7 @@
     <header data-bs-theme="dark">
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Corentin Hillion</a>
+          <a class="navbar-brand" href="/">Corentin Hillion</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -29,6 +29,9 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Skills Matrix</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
               </li>
             </ul>
             <!-- <form class="d-flex" role="search">
@@ -178,6 +181,12 @@
           <div class="col-md-3 col-lg-4"><?php show_skill_table($engineering_skills,'Engineering')?></div>
           <div class="col-md-6 col-lg-4"><?php show_skill_table($dev_skills,'Development')?></div>
           <div class="col-md-3 col-lg-4"><?php show_skill_table($lang_skills,'Language')?></div>
+        </div>
+      </div>
+      <div id="contact" class="container category" style="display:none">  
+        <?php $text="Something short and leading about the collection below—its contents, the creator, etc. 
+        Make it short and sweet, but not too short so folks don’t simply skip over it entirely.";  ?>    
+        <?php show_card('img/kite.jpg','Passionate',$text,'Last updated 4 mins ago')?>        
         </div>
       </div>
       <!-- FOOTER
