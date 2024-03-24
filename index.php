@@ -48,104 +48,56 @@
         <?php $text="Something short and leading about the collection below—its contents, the creator, etc. 
         Make it short and sweet, but not too short so folks don’t simply skip over it entirely.";
         $text="";  ?>    
-        <?php show_card('img/profil.jpg','Engineer',$text,'Last updated 4 mins ago')?> 
-        <?php show_card('img/kite.jpg','Passionate',$text,'Last updated 4 mins ago')?>
+        <?php show_card('img/profil.jpg','Engineer',$text,'...')?> 
+        <?php //show_card('img/kite.jpg','Passionate',$text,'Last updated 4 mins ago')?>
       </div>
 
       <div id="experience" class="container category" style="display:none"> 
         <div class="row">
-          <div class="col">
-              <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
-                  <div class="timeline-step">
-                      <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2003">
-                          <div class="inner-circle"></div>
-                          <p class="h6 mt-3 mb-1">2011</p>
-                          <p class="h6 text-muted mb-1">Nantes, France</p>
-                          <p class="h6 text-muted mb-0 mb-lg-0">Graduate from ICAM Engineering School</p>
-                      </div>
-                  </div>
-                  <div class="timeline-step">
-                      <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2004">
-                          <div class="inner-circle"></div>
-                          <p class="h6 mt-3 mb-1">2011</p>
-                          <p class="h6 text-muted mb-1">Brisbane</p>
-                          <p class="h6 text-muted mb-0 mb-lg-0">Started at Sicame Australia</p>
-                      </div>
-                  </div>
-                  <div class="timeline-step">
-                      <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2005">
-                          <div class="inner-circle"></div>
-                          <p class="h6 mt-3 mb-1">2022</p>
-                          <p class="h6 text-muted mb-1">Gold Coast</p>
-                          <p class="h6 text-muted mb-0 mb-lg-0">Launched FabLense</p>
-                      </div>
-                  </div>
-                </div>
-              </div>
+          <div class="col-md-5 col-lg-4">
+            <?php $entries['Fablense']=[
+              'id'=>'Fablense',
+              'image'=>'fablense.jpg',
+              'location'=>'Gold Coast, Australia',
+              'title'=>'Founder',
+              'content'=>'Develop a hardware/software tracking solution for manufacturing assets',
+              'date-start'=>'2022',
+              'date-end'=>'now'
+            ];
+            $entries['Sicame2']=[
+              'id'=>'Sicame2',
+              'image'=>'sicame.png',
+              'location'=>'Brisbane, Australia',
+              'title'=>'Industrial Engineer',
+              'content'=>'Design, optimize, maintain manufacturing facilities',
+              'date-start'=>'2016',
+              'date-end'=>'2022'
+            ];
+            $entries['Sicame1']=[
+              'id'=>'Sicame1',
+              'image'=>'sicame.png',
+              'location'=>'Brisbane, Australia',
+              'title'=>'Product Engineer',
+              'content'=>'Develop products for the electrical distribution network',
+              'date-start'=>'2011',
+              'date-end'=>'2016'
+            ];
+            $entries['ICAM']=[
+              'id'=>'ICAM',
+              'image'=>'icam.png',
+              'location'=>'Nantes, France',
+              'title'=>'Engineer Student',
+              'content'=>'Generalist engineer school, Mechanical, Electrical, Electronic, Software',
+              'date-start'=>'2006',
+              'date-end'=>'2011'
+            ];
+            ?>            
+            <?php show_entry_timeline($entries)?>
           </div>
-          <style>
-            body{margin-top:20px;}
-            .timeline-steps {
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap
-            }
-
-            .timeline-steps .timeline-step {
-                align-items: center;
-                display: flex;
-                flex-direction: column;
-                position: relative;
-                margin: 1rem
-            }
-
-            @media (min-width:768px) {
-                .timeline-steps .timeline-step:not(:last-child):after {
-                    content: "";
-                    display: block;
-                    border-top: .25rem dotted #3b82f6;
-                    width: 3.46rem;
-                    position: absolute;
-                    left: 7.5rem;
-                    top: .3125rem
-                }
-                .timeline-steps .timeline-step:not(:first-child):before {
-                    content: "";
-                    display: block;
-                    border-top: .25rem dotted #3b82f6;
-                    width: 3.8125rem;
-                    position: absolute;
-                    right: 7.5rem;
-                    top: .3125rem
-                }
-            }
-
-            .timeline-steps .timeline-content {
-                width: 10rem;
-                text-align: center
-            }
-
-            .timeline-steps .timeline-content .inner-circle {
-                border-radius: 1.5rem;
-                height: 1rem;
-                width: 1rem;
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                background-color: #3b82f6
-            }
-
-            .timeline-steps .timeline-content .inner-circle:before {
-                content: "";
-                background-color: #3b82f6;
-                display: inline-block;
-                height: 3rem;
-                width: 3rem;
-                min-width: 3rem;
-                border-radius: 6.25rem;
-                opacity: .5
-            }
-          </style>
+          <div class="col-md-7 col-lg-8">
+            <?php show_details_timeline($entries)?>
+          </div>
+        </div>
       </div>
 
       <div id="skills" class="container category" style="display:none">
@@ -189,7 +141,7 @@
           ['Instagram','insta.png','Cocololco','','https://www.instagram.com/cocololco/'],
           ['Twitter','twitter.png','Coc00z','','https://twitter.com/C0c00z'],
           ['Facebook','facebook.png','Corentin Hillion','','https://www.facebook.com/corentin.hillion'],
-          ['Poker-Schedule.com','poker.png','Coco','Owner of this website','https://poker-schedule.com/'],
+          //['Poker-Schedule.com','poker.png','Coco','Owner of this website','https://poker-schedule.com/'],
           //['Hendonmob','hendonmob.png','Corentin Hillion','Poker Player','https://pokerdb.thehendonmob.com/player.php?a=r&n=526022'],
           
         ];?>
@@ -203,7 +155,6 @@
       </footer> -->
     </main>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/function.js"></script>
-    
+    <script src="js/function.js"></script>    
   </body>
 </html>
