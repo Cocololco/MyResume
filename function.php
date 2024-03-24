@@ -97,5 +97,46 @@
     <?php
     }
   }
+  
+
+  function show_entry_timeline($entries){?>
+    <div class="list-group">
+      <?php
+      foreach($entries as $entry){
+        ?>
+        <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+          <div class="d-flex gap-2 w-100 justify-content-between">
+            <div style="width:50%">
+              <img src="img/<?php echo $entry['image']?>" alt="twbs" height="25" class="rounded flex-shrink-0">
+              <h6 class="mb-0"><?php echo $entry['title']?></h6>
+              <small class="opacity-50 text-nowrap"><?php echo $entry['location']?></small>
+            </div>
+            <div >
+              <p class="mb-0 opacity-75"><?php echo $entry['content']?></p>
+              <div class="d-flex gap-2 justify-content-center">
+                <small class="opacity-50 text-nowrap"><?php echo $entry['date-start']?></small>
+                <small class="opacity-50 text-nowrap"><?php echo $entry['date-end']?></small>
+              </div>
+            </div>
+          </div>
+        </a>  
+        <?php
+      }?>
+    </div>
+    <?php
+  }
+
+  function show_details_timeline($entries){?>
+    
+      <?php
+      foreach($entries as $entry){
+        ?>
+        <div id="<?php echo $entry['id']?>" class="border rounded">
+          <?php echo $entry['id']?>
+        </div>  
+        <?php
+      }?>
+    <?php
+  }
 
 ?>

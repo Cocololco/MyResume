@@ -14,11 +14,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
       // Hide all category containers
       categoryContainers.forEach(container => {
-        container.style.display = "none";
+        container.classList.remove("active");
       });
 
       // Show the selected category container
-      categoryContainers[index].style.display = "block";
+      categoryContainers[index].classList.add("active");
     });
   });
 });
