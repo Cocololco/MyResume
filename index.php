@@ -95,7 +95,7 @@
             <?php show_entry_timeline($entries)?>
           </div>
           <div class="col-md-7 col-lg-8">
-            <?php show_details_timeline($entries)?>
+            <?php //show_details_timeline($entries)?>
           </div>
         </div>
       </div>
