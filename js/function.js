@@ -15,10 +15,12 @@ document.addEventListener("DOMContentLoaded", function() {
       // Hide all category containers
       categoryContainers.forEach(container => {
         container.classList.remove("active");
+        // container.style.display = "none";
       });
 
       // Show the selected category container
       categoryContainers[index].classList.add("active");
+      // categoryContainers[index].style.display = "block";
     });
   });
 });

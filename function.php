@@ -100,29 +100,69 @@
   
 
   function show_entry_timeline($entries){?>
-    <div class="list-group">
-      <?php
-      foreach($entries as $entry){
-        ?>
-        <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-          <div class="d-flex gap-2 w-100 justify-content-between">
-            <div style="width:50%">
-              <img src="img/<?php echo $entry['image']?>" alt="twbs" height="25" class="rounded flex-shrink-0">
-              <h6 class="mb-0"><?php echo $entry['title']?></h6>
-              <small class="opacity-50 text-nowrap"><?php echo $entry['location']?></small>
+    <div class="list-group gap-3 py-3 list-group-horizontal w-100">
+      <div class="list-group col-4">
+        <?php
+        foreach($entries as $entry){
+          ?>
+          <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+            <div class="d-flex gap-2 w-100 justify-content-between"
+            data-bs-toggle="collapse" 
+              data-bs-target="#collapse<?php echo $entry['id']?>" 
+              aria-expanded="true" 
+              aria-controls="collapse"
+            >
+              <div style="width:50%">
+                <img src="img/<?php echo $entry['image']?>" alt="twbs" height="25" class="rounded flex-shrink-0">
+                <h6 class="mb-0"><?php echo $entry['title']?></h6>
+                <small class="opacity-50 text-nowrap"><?php echo $entry['location']?></small>
+              </div>
+              <div >
+                <p class="mb-0 opacity-75"><?php echo $entry['content']?></p>
+                <div class="d-flex gap-2 justify-content-center">
+                  <small class="opacity-50 text-nowrap"><?php echo $entry['date-start']?></small>
+                  <small class="opacity-50 text-nowrap"><?php echo $entry['date-end']?></small>
+                </div>
+              </div>
             </div>
-            <div >
-              <p class="mb-0 opacity-75"><?php echo $entry['content']?></p>
-              <div class="d-flex gap-2 justify-content-center">
-                <small class="opacity-50 text-nowrap"><?php echo $entry['date-start']?></small>
-                <small class="opacity-50 text-nowrap"><?php echo $entry['date-end']?></small>
+          </a>  
+          <?php
+        }?>
+      </div>
+      <div class="list-group col-8">
+        <div class="accordion" id="accordionExample">
+        <?php foreach($entries as $entry){?>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading<?php echo $entry['id']?>">
+              <button class="accordion-button 
+              <?php if(empty($entry['active'])){echo "collapsed";}?>
+              " 
+              type="button" 
+              data-bs-toggle="collapse" 
+              data-bs-target="#collapse<?php echo $entry['id']?>" 
+              aria-expanded="true" 
+              aria-controls="collapse<?php echo $entry['id']?>" ">
+                <span><?php echo $entry['company']?> - <?php echo $entry['title']?></span>
+              </button>
+            </h2>
+            <div id="collapse<?php echo $entry['id']?>" 
+            class="accordion-collapse collapse <?php if(!empty($entry['active'])){echo "show";}?>" 
+            aria-labelledby="heading<?php echo $entry['id']?>" 
+            data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong><?php echo $entry['title']?></strong><br>
+                <span class="opacity-50 text-nowrap" style=""><?php echo $entry['date-start']?>-<?php echo $entry['date-end']?></span><br>
+                <?php foreach($entry['details'] as $detail){?>
+                  <li><?php echo $detail?></li>
+                <?php }?>
               </div>
             </div>
           </div>
-        </a>  
-        <?php
-      }?>
+          <?php } ?>
+        </div>
+      </div>
     </div>
+    
     <?php
   }
 
