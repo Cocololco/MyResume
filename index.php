@@ -156,6 +156,7 @@
                   ['Laravel','laravel.png',4,''],
                   ['HTML & CSS','htmlcss.png',4,''],
                   ['RestAPI','restapi.png',4,''],
+                  ['Linux Server Management','linux.png',3,''],
                   ['Javascript','javascript.jpg',3,''],
                   ['Mysql','mysql.png',3,''],
                   ['SQL','sql.jpg',3,''],

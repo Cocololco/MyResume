@@ -100,8 +100,8 @@
   
 
   function show_entry_timeline($entries){?>
-    <div class="list-group gap-3 py-3 list-group-horizontal w-100">
-      <div class="list-group col-4">
+    <div class="row list-group gap-3 py-3 list-group-horizontal w-100">
+      <div class="list-group col-md-4">
         <?php
         foreach($entries as $entry){
           ?>
@@ -129,7 +129,7 @@
           <?php
         }?>
       </div>
-      <div class="list-group col-8">
+      <div class="list-group col-md-8">
         <div class="accordion" id="accordionExample">
         <?php foreach($entries as $entry){?>
           <div class="accordion-item">
