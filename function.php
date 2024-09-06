@@ -100,7 +100,7 @@
   
 
   function show_entry_timeline($entries){?>
-    <div class="row list-group gap-3 py-3 list-group-horizontal w-100">
+    <div class="row list-group py-3 list-group-horizontal w-100">
       <div class="list-group col-md-4">
         <?php
         foreach($entries as $entry){
